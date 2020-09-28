@@ -1,11 +1,11 @@
 ## Organisation des styles
 
-Dans le dossier `src` créer un dossier `styles` y créer les 2 fichiers suivants :
+Dans le dossier `src` créer un dossier `styles` et y créer les 2 fichiers suivants :
 
 - `styles/index.scss`
 - `styles/_variables.scss`
 
-Dans le fichier `angular.json`, rechercher les occurences de `"src/styles.scss"` vers `"src/styles/index.scss"`, puis supprimer le fichier `"src/styles.scss"`
+Dans le fichier `angular.json`, remplacer les occurences de `"src/styles.scss"` par `"src/styles/index.scss"`, puis supprimer le fichier `"src/styles.scss"`
 
 > Redémarrer le serveur de dev pour prendre en compte ce changement
 

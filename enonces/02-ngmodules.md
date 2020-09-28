@@ -1,6 +1,6 @@
 ## Création des modules
 
-Créer un module `ProductsModule` **avec le routing** qui contiendra les classes liées aux produits (services, composants, pipes, directives...)
+Créer un module `ProductsModule` **avec le routing (trouver l'option associée)** qui contiendra les classes liées aux produits (services, composants, pipes, directives...)
 
 Créer un module `SharedModule` pour les composants, pipes et directives qui seront réutilisés entre les modules
 
@@ -10,6 +10,6 @@ Dans `AppModule`, importer `SharedModule`, `BrowserModule`, `ProductsModule`, `A
 
 Dans `SharedModule`, exporter `CommonModule`
 
-Dans `ProductsModule`, remplacer l'importe de `CommonModule` par `SharedModule`
+Dans `ProductsModule`, remplacer l'import de `CommonModule` par `SharedModule`
 
-> Pour créer une module on utilise la commande `ng generate module`, vous pouver afficher l'aide avec l'option `--help`, vous pouvez lancer la commande "à blanc" avec l'option `-d` (`--dry-run`).
+> Pour créer un module on utilise la commande `ng generate module`, vous pouvez afficher l'aide avec l'option `--help`, vous pouvez lancer la commande "à blanc" avec l'option `-d` (`--dry-run`).
