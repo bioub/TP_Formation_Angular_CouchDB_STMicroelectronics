@@ -18,3 +18,5 @@ Dans `ProductsRoutingModule` créer les routes suivantes :
 | `products/:productId` | `ProductDetailsComponent`  |
 
 Effacer le contenu de app.component.html sauf `<router-outlet></router-outlet>` puis tester les différentes URLs
+
+> Bonus : ajouter un URLMatcher pour la route `products/:productId`
