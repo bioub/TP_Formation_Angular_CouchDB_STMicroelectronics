@@ -7,6 +7,8 @@ Nous allons créer un catalogue produit contenant les fonctionnalités suivantes
 * comparaison de produits
 * ...
 
+[Voir la démo](https://bioub.github.io/TP_Formation_Angular_CouchDB_STMicroelectronics/)
+
 ## Prérequis
 
 * vérifier que Node.js v10+ est installé `node -v`
