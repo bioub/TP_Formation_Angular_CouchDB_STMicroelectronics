@@ -82,7 +82,7 @@ Modifier la méthode `ngOnInit` comme suit :
 ngOnInit(): void {
   if (!this.href && this.path?.length) {
     this.external = false;
-    this.href = this.router.createUrlTree(this.path)
+    this.href = this.router.createUrlTree(this.path).toString();
   }
 }
 ```

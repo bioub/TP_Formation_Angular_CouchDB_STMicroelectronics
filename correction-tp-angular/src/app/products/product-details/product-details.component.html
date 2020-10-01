@@ -1,0 +1,124 @@
+<ng-container *ngIf="product">
+  <div class="phone-images">
+    <img
+      [src]="'assets/' + mainImageUrl"
+      class="phone"
+      [ngClass]="{ selected: img === mainImageUrl }"
+      *ngFor="let img of product.images"
+    />
+  </div>
+
+  <h1>{{ product.name }}</h1>
+
+  <p>{{ product.description }}</p>
+
+  <ul class="phone-thumbs">
+    <li *ngFor="let img of product.images">
+      <img [src]="'assets/' + img" (click)="setImage(img)" />
+    </li>
+  </ul>
+
+  <ul class="specs">
+    <li>
+      <span>Availability and Networks</span>
+      <dl>
+        <dt>Availability</dt>
+        <dd *ngFor="let availability of product.availability">
+          {{ availability }}
+        </dd>
+      </dl>
+    </li>
+    <li>
+      <span>Battery</span>
+      <dl>
+        <dt>Type</dt>
+        <dd>{{ product.battery.type }}</dd>
+        <dt>Talk Time</dt>
+        <dd>{{ product.battery.talkTime }}</dd>
+        <dt>Standby time (max)</dt>
+        <dd>{{ product.battery.standbyTime }}</dd>
+      </dl>
+    </li>
+    <li>
+      <span>Storage and Memory</span>
+      <dl>
+        <dt>RAM</dt>
+        <dd>{{ product.storage.ram }}</dd>
+        <dt>Internal Storage</dt>
+        <dd>{{ product.storage.flash }}</dd>
+      </dl>
+    </li>
+    <li>
+      <span>Connectivity</span>
+      <dl>
+        <dt>Network Support</dt>
+        <dd>{{ product.connectivity.cell }}</dd>
+        <dt>WiFi</dt>
+        <dd>{{ product.connectivity.wifi }}</dd>
+        <dt>Bluetooth</dt>
+        <dd>{{ product.connectivity.bluetooth }}</dd>
+        <dt>Infrared</dt>
+        <dd>{{ product.connectivity.infrared ? "✓" : "✗" }}</dd>
+        <dt>GPS</dt>
+        <dd>{{ product.connectivity.gps ? "✓" : "✗" }}</dd>
+      </dl>
+    </li>
+    <li>
+      <span>Android</span>
+      <dl>
+        <dt>OS Version</dt>
+        <dd>{{ product.android.os }}</dd>
+        <dt>UI</dt>
+        <dd>{{ product.android.ui }}</dd>
+      </dl>
+    </li>
+    <li>
+      <span>Size and Weight</span>
+      <dl>
+        <dt>Dimensions</dt>
+        <dd *ngFor="let dim of product.sizeAndWeight.dimensions">{{ dim }}</dd>
+        <dt>Weight</dt>
+        <dd>{{ product.sizeAndWeight.weight }}</dd>
+      </dl>
+    </li>
+    <li>
+      <span>Display</span>
+      <dl>
+        <dt>Screen size</dt>
+        <dd>{{ product.display.screenSize }}</dd>
+        <dt>Screen resolution</dt>
+        <dd>{{ product.display.screenResolution }}</dd>
+        <dt>Touch screen</dt>
+        <dd>{{ product.display.touchScreen ? "✓" : "✗" }}</dd>
+      </dl>
+    </li>
+    <li>
+      <span>Hardware</span>
+      <dl>
+        <dt>CPU</dt>
+        <dd>{{ product.hardware.cpu }}</dd>
+        <dt>USB</dt>
+        <dd>{{ product.hardware.usb }}</dd>
+        <dt>Audio / headphone jack</dt>
+        <dd>{{ product.hardware.audioJack }}</dd>
+        <dt>FM Radio</dt>
+        <dd>{{ product.hardware.fmRadio ? "✓" : "✗" }}</dd>
+        <dt>Accelerometer</dt>
+        <dd>{{ product.hardware.accelerometer ? "✓" : "✗" }}</dd>
+      </dl>
+    </li>
+    <li>
+      <span>Camera</span>
+      <dl>
+        <dt>Primary</dt>
+        <dd>{{ product.camera.primary }}</dd>
+        <dt>Features</dt>
+        <dd>{{ product.camera.features.join(", ") }}</dd>
+      </dl>
+    </li>
+    <li>
+      <span>Additional Features</span>
+      <dd>{{ product.additionalFeatures }}</dd>
+    </li>
+  </ul>
+</ng-container>

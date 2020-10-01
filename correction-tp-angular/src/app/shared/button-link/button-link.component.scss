@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+
+:host {
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: $color-st_darkBlue;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+}

@@ -1,0 +1,16 @@
+<ag-grid-angular
+  style="width: 100%; height: 100%"
+  class="ag-theme-balham"
+  [defaultColDef]="defaultColDef"
+  [domLayout]="'autoHeight'"
+  [rowData]="products"
+  [columnDefs]="columnDefs"
+  [suppressRowClickSelection]="true"
+  [suppressCellSelection]="true"
+  rowSelection="multiple"
+  (rowClicked)="handleRowClick($event)"
+  (selectionChanged)="handleSelectionChanged($event)"
+>
+</ag-grid-angular>
+
+<st-button-link [path]="['products', 'compare']">Comparer</st-button-link>
