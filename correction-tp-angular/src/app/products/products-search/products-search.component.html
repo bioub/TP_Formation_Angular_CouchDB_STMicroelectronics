@@ -1,0 +1,22 @@
+<div>
+  Name :
+  <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input type="text" pInputText placeholder="Search" [(ngModel)]="filters.name" />
+</span>
+</div>
+
+<div>
+  FM Radio :
+  <p-triStateCheckbox [(ngModel)]="filters.fmRadio" label="FM Radio"></p-triStateCheckbox>
+</div>
+
+<div>
+  Availability :
+  <p-listbox (click)="search()" [checkbox]="true" [multiple]="true" [options]="[{label: 'T-Mobile', value: 'T-Mobile'}, {label: 'Verizon', value: 'Verizon'}]" [(ngModel)]="filters.availability"></p-listbox>
+</div>
+
+<div>
+  <a routerLink="/products" pButton label="See results"></a>
+  <button (click)="reset()" pButton type="button" label="Reset" class="p-button-secondary"></button>
+</div>

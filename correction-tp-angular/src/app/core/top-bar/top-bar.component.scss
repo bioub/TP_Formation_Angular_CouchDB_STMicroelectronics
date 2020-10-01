@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+
+:host {
+  display: flex;
+  background-color: $color-st_darkBlue;
+  padding: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+
+  &.current {
+    text-decoration: underline;
+  }
+}

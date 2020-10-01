@@ -1,0 +1,109 @@
+<div class="comparator">
+  <div class="product" *ngFor="let p of products">
+    <h2>{{ p.name }}</h2>
+    <img [src]="'assets/' + p.images[0]" class="phone" />
+    <ul class="specs">
+      <li>
+        <span>Availability and Networks</span>
+        <dl>
+          <dt>Availability</dt>
+          <dd *ngFor="let availability of p.availability">
+            {{ availability }}
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <span>Battery</span>
+        <dl>
+          <dt>Type</dt>
+          <dd>{{ p.battery.type }}</dd>
+          <dt>Talk Time</dt>
+          <dd>{{ p.battery.talkTime }}</dd>
+          <dt>Standby time (max)</dt>
+          <dd>{{ p.battery.standbyTime }}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Storage and Memory</span>
+        <dl>
+          <dt>RAM</dt>
+          <dd>{{ p.storage.ram }}</dd>
+          <dt>Internal Storage</dt>
+          <dd>{{ p.storage.flash }}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Connectivity</span>
+        <dl>
+          <dt>Network Support</dt>
+          <dd>{{ p.connectivity.cell }}</dd>
+          <dt>WiFi</dt>
+          <dd>{{ p.connectivity.wifi }}</dd>
+          <dt>Bluetooth</dt>
+          <dd>{{ p.connectivity.bluetooth }}</dd>
+          <dt>Infrared</dt>
+          <dd>{{ p.connectivity.infrared ? "✓" : "✗" }}</dd>
+          <dt>GPS</dt>
+          <dd>{{ p.connectivity.gps ? "✓" : "✗" }}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Android</span>
+        <dl>
+          <dt>OS Version</dt>
+          <dd>{{ p.android.os }}</dd>
+          <dt>UI</dt>
+          <dd>{{ p.android.ui }}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Size and Weight</span>
+        <dl>
+          <dt>Dimensions</dt>
+          <dd *ngFor="let dim of p.sizeAndWeight.dimensions">{{ dim }}</dd>
+          <dt>Weight</dt>
+          <dd>{{ p.sizeAndWeight.weight }}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Display</span>
+        <dl>
+          <dt>Screen size</dt>
+          <dd>{{ p.display.screenSize }}</dd>
+          <dt>Screen resolution</dt>
+          <dd>{{ p.display.screenResolution }}</dd>
+          <dt>Touch screen</dt>
+          <dd>{{ p.display.touchScreen ? "✓" : "✗" }}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Hardware</span>
+        <dl>
+          <dt>CPU</dt>
+          <dd>{{ p.hardware.cpu }}</dd>
+          <dt>USB</dt>
+          <dd>{{ p.hardware.usb }}</dd>
+          <dt>Audio / headphone jack</dt>
+          <dd>{{ p.hardware.audioJack }}</dd>
+          <dt>FM Radio</dt>
+          <dd>{{ p.hardware.fmRadio ? "✓" : "✗" }}</dd>
+          <dt>Accelerometer</dt>
+          <dd>{{ p.hardware.accelerometer ? "✓" : "✗" }}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Camera</span>
+        <dl>
+          <dt>Primary</dt>
+          <dd>{{ p.camera.primary }}</dd>
+          <dt>Features</dt>
+          <dd>{{ p.camera.features.join(", ") }}</dd>
+        </dl>
+      </li>
+      <li>
+        <span>Additional Features</span>
+        <dd>{{ p.additionalFeatures }}</dd>
+      </li>
+    </ul>
+  </div>
+</div>
