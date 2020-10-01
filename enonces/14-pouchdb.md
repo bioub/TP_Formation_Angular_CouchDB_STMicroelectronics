@@ -40,7 +40,7 @@ getAllDocs(): Observable<Product[]> {
       include_docs: true,
     }),
   ).pipe<any, Product[]>(
-    map((data: any) => data.rows.map((r) => omit(r.doc, ['_rev']))),
+    map((data: any) => data.rows.map((r) => r.doc)),
   );
 }
 
@@ -48,3 +48,5 @@ getDocById(id: string): Observable<Product> {
   return from(this.localDb.get(id) as Promise<Product>);
 }
 ```
+
+> `from` provient de `rxjs` et `PouchDB` de `pouchdb-browser`
