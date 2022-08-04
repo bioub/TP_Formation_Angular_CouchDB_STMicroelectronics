@@ -11,15 +11,15 @@ Nous allons créer un catalogue produit contenant les fonctionnalités suivantes
 
 ## Prérequis
 
-* vérifier que Node.js v10+ est installé `node -v`
-* vérifier que npm v6+ est installé `npm -v`
-* vérifier la configuration du proxy `npm config get proxy`
+* vérifier que Node.js v14+ est installé `node -v`
+* vérifier que npm v8+ est installé `npm -v`
+* optionnel : vérifier la configuration du proxy `npm config get proxy`
 * installer la dernière version de Angular CLI `npm i -g @angular/cli`
 * dans VS Code installer les extensions :
   * Angular Language Service
   * EditorConfig for VSCode
   * Prettier - Code formatter
-  * TSLint
+  * ESLint
   * vscode-icons
 
 ## Exercices
