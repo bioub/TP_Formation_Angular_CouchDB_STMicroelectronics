@@ -12,4 +12,4 @@ Dans `SharedModule`, exporter `CommonModule`
 
 Dans `ProductsModule`, remplacer l'import de `CommonModule` par `SharedModule`
 
-> Pour créer un module on utilise la commande `ng generate module`, vous pouvez afficher l'aide avec l'option `--help`, vous pouvez lancer la commande "à blanc" avec l'option `-d` (`--dry-run`).
+> Pour créer un module on utilise la commande `ng generate module`, vous pouvez afficher l'aide avec l'option `--help`, vous pouvez lancer la commande "à blanc" avec l'option `--dry-run`.
