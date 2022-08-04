@@ -38,6 +38,6 @@ Dans la méthode subscribe ajouter ensuite la ligne suivante pour mettre à jour
 this.title.setTitle(this.activatedRoute.firstChild.snapshot.data.title);
 ```
 
-> Bonus 1 : utiliser l'opérateur `mapTo` pour que la méthode subscribe fournisse directement le titre
+> Bonus 1 : utiliser l'opérateur `map` pour que la méthode subscribe fournisse directement le titre
 
 > Bonus 2 : utiliser l'opérateur `switchMap` pour utiliser `this.activatedRoute.firstChild.data` qui est également un observable plutôt que le snapshot
